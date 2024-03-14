@@ -45,11 +45,12 @@ io.on("connection", (socket) => {
 		    const isDead = bullets[0] == 1;
 		    console.log(turn);
 		    if (isDead) {
-		      io.emit("result", "lost");
+		      io.emit("result", ["lost", turn]);
+
 		    } else {
 		      bullets.shift();
 		      console.log(bullets);
-		      io.emit("result", "survive");
+		      io.emit("result", ["survive", turn]);
 		    }
 		    turn = turn == users[0] ? users[1]: users[0];
 		    io.emit("turn", turn);
