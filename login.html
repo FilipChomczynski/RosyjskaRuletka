@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Zaloguj się</h1>
+        <form id="loginForm">
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username" name="username" required minlength="1">
+            <button type="submit">Zaloguj</button>
+        </form>
+        <p id="error-message" class="error"></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
